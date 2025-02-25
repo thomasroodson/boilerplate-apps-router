@@ -4,7 +4,22 @@ import Main from '.'
 
 export default {
   title: 'Main',
-  component: Main
+  component: Main,
+  argTypes: {
+    title: {
+      control: { type: 'text' }
+    },
+    description: {
+      control: { type: 'text' }
+    }
+  },
+  parameters: {
+    docs: {
+      description: {
+        component: 'Another description, overriding the comments'
+      }
+    }
+  }
 } as Meta
 
 export const Default: StoryObj = {}
