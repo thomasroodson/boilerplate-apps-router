@@ -6,18 +6,18 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout Repository
-        uses: actions/checkout@v4
+        user: actions/checkout@v3
 
       - name: Setup Node
-        uses: actions/setup-node@v4
+        uses: actions/setup-node@v3
         with:
-          node-version: 20.x
+          node-version: 18.x
           cache: 'npm'
 
       - name: Install dependencies
         run: npm install
 
-      - name: Listing
+      - name: Linting
         run: npm run lint
 
       - name: Testing
@@ -25,4 +25,3 @@ jobs:
 
       - name: Build
         run: npm run build
-
